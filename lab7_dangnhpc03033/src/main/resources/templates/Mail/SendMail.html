@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Send Email</title>
+
+<!-- CSS của Bootstrap -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<h1 class="mt-5">Send Email</h1>
+
+		<form action="/send-mail" method="post" enctype="multipart/form-data"
+			class="mt-4">
+			<div class="mb-3">
+				<label for="from" class="form-label">From:</label> <input
+					type="text" id="from" name="from" class="form-control" required>
+			</div>
+
+			<div class="mb-3">
+				<label for="to" class="form-label">To:</label> <input type="text"
+					id="to" name="to" class="form-control" required>
+			</div>
+
+			<div class="mb-3">
+				<label for="cc" class="form-label">CC:</label> <input type="text"
+					id="cc" name="cc" class="form-control">
+			</div>
+
+			<div class="mb-3">
+				<label for="bcc" class="form-label">BCC:</label> <input type="text"
+					id="bcc" name="bcc" class="form-control">
+			</div>
+
+			<div class="mb-3">
+				<label for="subject" class="form-label">Subject:</label> <input
+					type="text" id="subject" name="subject" class="form-control"
+					required>
+			</div>
+
+			<div class="mb-3">
+				<label for="body" class="form-label">Body:</label>
+				<textarea id="body" name="body" class="form-control" required></textarea>
+			</div>
+
+			<div class="mb-3">
+				<label for="attachments" class="form-label">Attachments:</label> <input
+					type="file" id="attachments" name="attachments"
+					class="form-control" multiple>
+			</div>
+
+			<button type="submit" class="btn btn-primary">Send</button>
+		</form>
+	</div>
+
+	<!-- JavaScript của Bootstrap (tùy chọn) -->
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
